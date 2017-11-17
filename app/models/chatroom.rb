@@ -3,6 +3,8 @@ class Chatroom < ApplicationRecord
   has_many :users, through: :messages
   validates :topic, presence: true, uniqueness: true, case_sensitive: false
   before_validation :sanitize, :slugify
+  default_scope -> { order(created_at: :desc) }
+  
 
 
   def to_param

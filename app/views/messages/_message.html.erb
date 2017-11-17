@@ -1,1 +1,1 @@
-<p><strong><%= message.user.username %>    said:</strong> <%= message.created_at %> <%= message.content %></p>
+<p><strong><%= message.user.username %>    said </strong> <%= change_time(message.created_at) %> ago : <%= message.content %></p>

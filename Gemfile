@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.0'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 3.0'
 
-
+gem 'momentjs-rails'
 
 
 group :production do 
