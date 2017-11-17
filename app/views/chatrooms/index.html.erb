@@ -8,9 +8,9 @@
     
   </div>
     <ul id="chatroom-index"> 
-  <% if @chatrooms.any? %>
-      <%= render @chatrooms%>
-  <%else %>
+      <% if @chatrooms.any? %>
+          <%= render @chatrooms%>
+      <%else %>
     </ul>
     <p>Be the first one to make a chatroom!</p>
   <% end %>

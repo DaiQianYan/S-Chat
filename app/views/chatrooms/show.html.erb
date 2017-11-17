@@ -1,6 +1,7 @@
 <div class="row col-md-8 col-md-offset-2">
   <h1><%= @chatroom.topic %></h1>
 
+  <%= render partial: 'messages/message_form', locals: {message: @message, chatroom: @chatroom}%>
 <div class="panel panel-default">
   <% if @chatroom.messages.any? %>
     <div class="panel-body" id="messages">
@@ -13,5 +14,5 @@
 </div>
 
 
-  <%= render partial: 'messages/message_form', locals: {message: @message, chatroom: @chatroom}%>
+
 </div>

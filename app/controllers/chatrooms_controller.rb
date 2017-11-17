@@ -2,7 +2,8 @@ class ChatroomsController < ApplicationController
 
   def index
     @chatroom = Chatroom.new
-    @chatrooms = Chatroom.all
+    # @chatrooms = Chatroom.all
+    @chatrooms = Chatroom.order('created_at desc')
   end
 
   def new
