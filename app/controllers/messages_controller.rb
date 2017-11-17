@@ -6,7 +6,9 @@ class MessagesController < ApplicationController
     if message.save
       ActionCable.server.broadcast 'messages',
         message: message.content,
-        user: message.user.username
+        user: message.user.username,
+        created_at: message.created_at 
+
       head :ok
     end
   end
@@ -14,6 +16,7 @@ class MessagesController < ApplicationController
   private
 
     def message_params
-      params.require(:message).permit(:content, :chatroom_id)
+      params.require(:message).permit(:content, :chatroom_id, :created_at)
     end
+
 end
