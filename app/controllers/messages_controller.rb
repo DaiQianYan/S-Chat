@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
         message: message.content,
         user: message.user.username,
         created_at: message.created_at 
+        # user_id: message.user.id
 
       head :ok
     end
